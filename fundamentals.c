@@ -57,4 +57,27 @@ void fundamentals()
         // while (buffer1 != "q")
     } while (strcmp(buffer1, "q") != 0);
     printf("*** End of Indexing Strings Demo ***\n\n");
+
+    // V2
+    printf("*** Start of Measuring Strings Demo ***\n");
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char buffer2[BUFFER_SIZE];
+    do {
+        printf("Type a string (q - to quit):\n");
+
+        // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to buffer2
+        fgets(buffer2, BUFFER_SIZE, stdin);
+
+        // Setting the last character in cstring to null delimiter byte
+        buffer2[strlen(buffer2) - 1] = '\0';
+
+        // if (buffer2 != "q")
+        if (strcmp(buffer2, "q") != 0) {
+            // display cstring and it length casted to int
+            printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
+        }
+        // while (buffer2 != "q")
+    } while (strcmp(buffer2, "q") != 0);
+    printf("*** End of Measuring Strings Demo ***\n\n");
 }

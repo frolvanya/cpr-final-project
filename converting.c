@@ -36,4 +36,32 @@ void converting(void)
         // while (intString != "q")
     } while (strcmp(intString, "q") != 0);
     printf("*** End of Converting Strings to int Demo ***\n\n");
+
+    // V2
+    printf("*** Start of Converting Strings to double Demo ***\n");
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char doubleString[BUFFER_SIZE];
+
+    // declaring double variable
+    double doubleNumber;
+
+    do {
+        printf("Type an int numeric string (q - to quit ):\n");
+
+        // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to doubleString
+        fgets(doubleString, BUFFER_SIZE, stdin);
+
+        // Setting the last character in cstring to null delimiter byte
+        doubleString[strlen(doubleString) - 1] = '\0';
+
+        // if doubleString != "q"
+        if (strcmp(doubleString, "q") != 0) {
+            // string to double convertation
+            doubleNumber = atof(doubleString);
+            printf("Converted number is %f\n", doubleNumber);
+        }
+        // while (doubleString != "q")
+    } while (strcmp(doubleString, "q") != 0);
+    printf("*** End of Converting Strings to double Demo ***\n\n");
 }

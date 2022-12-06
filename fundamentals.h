@@ -11,6 +11,6 @@
 // include "string" linbrary so we can use string fucntions
 #include <string.h>
 
-// String Indexing
+// Cstring measuring
 void fundamentals(void);
 #endif

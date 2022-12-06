@@ -11,6 +11,6 @@
 // include "string" linbrary so we can use string fucntions
 #include <string.h>
 
-// Split string by spaces and display each word
+// Split string by commas and display each phrase
 void tokenizing(void);
 #endif

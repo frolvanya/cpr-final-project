@@ -11,6 +11,6 @@
 // include "string" linbrary so we can use string fucntions
 #include <string.h>
 
-// String Concatenation
+// Cstring comparing
 void manipulating(void);
 #endif
