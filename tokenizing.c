@@ -116,7 +116,7 @@ void tokenizing(void)
             // while (nextWord != NULL)
             while (nextSentence) {
                 // postfix increment, print sentencesCounter and nextSentence and then increment sentencesCounter
-                printf("Senetnce #%d is \'%s\'\n", sentencesCounter++, nextSentence);
+                printf("Sentence #%d is \'%s\'\n", sentencesCounter++, nextSentence);
 
                 // NULL as first argument means to continue tokenizing the string passed before
                 nextSentence = strtok(NULL, ".");
