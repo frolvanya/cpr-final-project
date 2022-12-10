@@ -11,6 +11,6 @@
 // include "string" linbrary so we can use string fucntions
 #include <string.h>
 
-// Cstring measuring
+// Copying cstrings
 void fundamentals(void);
 #endif

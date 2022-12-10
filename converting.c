@@ -64,4 +64,32 @@ void converting(void)
         // while (doubleString != "q")
     } while (strcmp(doubleString, "q") != 0);
     printf("*** End of Converting Strings to double Demo ***\n\n");
+
+    // V3
+    printf("*** Start of Converting Strings to long Demo ***\n");
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char longString[BUFFER_SIZE];
+
+    // declaring long variable
+    long longNumber;
+
+    do {
+        printf("Type an long numeric string (q - to quit):\n");
+
+        // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to longString
+        fgets(longString, BUFFER_SIZE, stdin);
+
+        // Setting the last character in cstring to null delimiter byte
+        longString[strlen(longString) - 1] = '\0';
+
+        // if intString != "q"
+        if (strcmp(longString, "q") != 0) {
+            // string to long convertation
+            longNumber = atol(longString);
+            printf("Converted number is %ld\n", longNumber);
+        }
+        // while (longString != "q")
+    } while (strcmp(longString, "q") != 0);
+    printf("*** End of Converting Strings to long Demo ***\n\n");
 }

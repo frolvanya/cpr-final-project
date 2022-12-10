@@ -86,4 +86,48 @@ void manipulating(void)
         // while (compare1 != "q")
     } while (strcmp(compare1, "q") != 0);
     printf("*** End of Comparing Strings Demo ***\n\n");
+
+    // V3
+    printf("*** Start of Searching Strings Demo ***\n");
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char haystack[BUFFER_SIZE];
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char needle[BUFFER_SIZE];
+
+    // setting pointer occurrence to NULL (safe state)
+    char* occurrence = NULL;
+    do {
+        printf("Type the string (q - to quit):\n");
+
+        // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to haystack
+        fgets(haystack, BUFFER_SIZE, stdin);
+
+        // Setting the last character in cstring to null delimiter byte
+        haystack[strlen(haystack) - 1] = '\0';
+
+        // if (string1 != "q")
+        if (strcmp(haystack, "q") != 0) {
+            printf("Type the substring:\n");
+
+            // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to needle
+            fgets(needle, BUFFER_SIZE, stdin);
+
+            // Setting the last character in cstring to null delimiter byte
+            needle[strlen(needle) - 1] = '\0';
+
+            // Finds the first occurrence of the substring needle in the string haystack
+            occurrence = strstr(haystack, needle);
+
+            // if (occurrence != NULL)
+            if (occurrence)
+                // Display needle and first occurrence position casted to int type
+                printf("\'%s\' found at %d position\n", needle, (int)(occurrence - haystack));
+            else
+                printf("Not found\n");
+        }
+        // while (haystack != "q")
+    } while (strcmp(haystack, "q") != 0);
+    printf("*** End of Searching Strings Demo ***\n\n");
 }

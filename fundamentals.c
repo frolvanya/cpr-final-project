@@ -80,4 +80,37 @@ void fundamentals()
         // while (buffer2 != "q")
     } while (strcmp(buffer2, "q") != 0);
     printf("*** End of Measuring Strings Demo ***\n\n");
+
+    // V3
+    printf("*** Start of Copying Strings Demo ***\n");
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char destination[BUFFER_SIZE];
+
+    // declaring cstring variable with length of BUFFER_SIZE
+    char source[BUFFER_SIZE];
+    do {
+        // Setting the first character in cstring to null delimiter byte
+        destination[0] = '\0';
+
+        printf("Destination string is reset to empty\n");
+        printf("Type the source string (q - to quit):\n");
+
+        // Read string from stdin, stops when BUFFER_SIZE - 1 characters are read or \n is reached and stores to source
+        fgets(source, BUFFER_SIZE, stdin);
+
+        // Setting the last character in cstring to null delimiter byte
+        source[strlen(source) - 1] = '\0';
+
+        // if (buffer1 != "q")
+        if (strcmp(source, "q") != 0) {
+            // Copying source cstring content to destination
+            strcpy(destination, source);
+
+            // Display destination
+            printf("New destination string is \'%s\'\n", destination);
+        }
+        // while (source != "q")
+    } while (strcmp(source, "q") != 0);
+    printf("*** End of Copying Strings Demo ***\n\n");
 }

@@ -11,6 +11,6 @@
 // include "string" linbrary so we can use string fucntions
 #include <string.h>
 
-// Converts string to double
+// Converts string to long
 void converting(void);
 #endif
